@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(0,100,255);
+    color: rgb(0,100,255);
+    animation: color-changer 18s infinite;
+    animation-play-state: running;
+}
+@keyframes color-changer
+{
+    17%{
+        background-color: rgb(125,0,155);
+        color: rgb(125,0,155);
+    }
+    34%{
+        background-color: rgb(175,0,55);
+        color: rgb(175,0,55);
+    }
+    50%{
+        background-color: rgb(180,100,0);
+        color: rgb(180,100,0);
+    }
+    67%{
+        background-color: rgb(0,155,55);
+        color: rgb(0,155,55);
+    }
+    83%{
+        background-color: rgb(0,155,100);
+        color: rgb(0,155,100);
+    }
+}
+
+h1{
+    width: 20vh;
+    height: 10vh;
+    padding: 5vh 0;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 15px white;
+    font-size: 8vh;
+    font-family: sans-serif
+}
+
+span{
+    display: none;
+    color: white;
+    text-align: center;
+    width: 5vw;
+    margin: 1vw;
+    font-size: 15vh;
+    animation: blink 1s infinite;
+    animation-play-state: running;
+}
+@keyframes blink
+{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+hr{
+    width: 10vw;
+    height: 1vh;
+    background-color: white;
+    box-shadow: 0 0 25px 3px rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 24px;
+    animation: seconds_indicator 3s infinite;
+    animation-play-state: running;
+}
+@keyframes seconds_indicator
+{
+    33.33%{width: 80vw;}
+    66.67%{
+        width: 10vw;
+        transform: rotate(0deg);
+    }
+    100%{transform: rotate(720deg);}
+}
+
+
+@media screen and (orientation: landscape)
+{
+    body{
+        width: 95vw;
+        margin: auto;
+        flex-direction: row;
+    }
+
+    h1{
+        width: 25vh;
+        padding: 7.5vh 1vw;
+    }
+
+    span{display: block;}
+
+    hr{margin-left: 3vw;}
+}
