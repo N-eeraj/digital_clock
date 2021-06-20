@@ -12,10 +12,12 @@ setInterval(
         hh = date.slice(16, 18);
         // convert 24 hour to 12 hour
         if(hh > 12)
+		{
             hh -= 12;
-        // convert 1 digit to 2 digit
-        if(hh < 10)
-            hh = '0' + hh;
+			// convert 1 digit to 2 digit
+			if(hh < 10)
+				hh = '0' + hh;
+		}
         hr.innerText = hh;
         min.innerText = date.slice(19, 21);
         sec.innerText = date.slice(22, 24);
